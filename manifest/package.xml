@@ -1,63 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-  <!-- Apex Code -->
-  <types><members>*</members><name>ApexClass</name></types>
-  <types><members>*</members><name>ApexTrigger</name></types>
-  <types><members>*</members><name>ApexPage</name></types>
-  <types><members>*</members><name>ApexComponent</name></types>
-
-  <!-- Lightning -->
-  <types><members>*</members><name>LightningComponentBundle</name></types> <!-- LWC -->
-  <types><members>*</members><name>AuraDefinitionBundle</name></types> <!-- Aura -->
-
-  <!-- Flows / Process -->
-  <types><members>*</members><name>Flow</name></types>
-  <types><members>*</members><name>FlowDefinition</name></types>
-
-  <!-- Object & Fields -->
-  <types><members>*</members><name>CustomObject</name></types>
-  <types><members>*</members><name>CustomField</name></types>
-  <types><members>*</members><name>RecordType</name></types>
-  <types><members>*</members><name>ValidationRule</name></types>
-  <types><members>*</members><name>ListView</name></types>
-
-  <!-- Custom Metadata & Settings -->
-  <types><members>*</members><name>CustomMetadata</name></types>
-  <types><members>*</members><name>CustomObject</name></types> <!-- Includes Custom Settings -->
-
-  <!-- Labels, Tabs, Apps -->
-  <types><members>*</members><name>CustomLabel</name></types>
-  <types><members>*</members><name>CustomTab</name></types>
-  <types><members>*</members><name>CustomApplication</name></types>
-
-  <!-- Layouts, Profiles, Permission Sets -->
-  <types><members>*</members><name>Layout</name></types>
-  <types><members>*</members><name>Profile</name></types>
-  <types><members>*</members><name>PermissionSet</name></types>
-
-  <!-- Workflows / PB -->
-  <types><members>*</members><name>Workflow</name></types>
-
-
-  <!-- Email Templates -->
-  <types><members>*</members><name>EmailTemplate</name></types>
-
-  <!-- Community / Experience Cloud -->
-  <types><members>*</members><name>Network</name></types>
-  <types><members>*</members><name>SiteDotCom</name></types>
-  <types><members>*</members><name>ExperienceBundle</name></types>
-
-  <!-- Login Flows, Auth -->
-  <types><members>*</members><name>AuthProvider</name></types>
-  <types><members>*</members><name>Certificate</name></types>
-  <types><members>*</members><name>CorsWhitelistOrigin</name></types>
-
-  <!-- Others -->
-  <types><members>*</members><name>RemoteSiteSetting</name></types>
-  <types><members>*</members><name>StaticResource</name></types>
-  <types><members>*</members><name>Settings</name></types>
-
-  <types><members>*</members><name>FlexiPage</name></types>
-
-  <version>59.0</version>
+    <types>
+        <members>AddNewProductCustomController</members>
+        <members>AddNewProductCustomController_Test</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>addNewProductCustom</members>
+        <members>customProductLookup</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>addprod_AddProd</members>
+        <members>addprod_Back</members>
+        <members>addprod_BackRes</members>
+        <members>addprod_Cancel</members>
+        <members>addprod_ChoosePBMsg</members>
+        <members>addprod_ChoosePBTitle</members>
+        <members>addprod_EditSelected</members>
+        <members>addprod_ErrorMsg</members>
+        <members>addprod_Next</members>
+        <members>addprod_PBPlaceHolder</members>
+        <members>addprod_PriceBook</members>
+        <members>addprod_Save</members>
+        <members>addprod_ShowSel</members>
+        <members>addprod_SuccessMsg</members>
+        <members>addprod_SuccessMsg2</members>
+        <members>addprod_ValMsg1</members>
+        <members>addprod_ValMsg2</members>
+        <members>addprod_ValMsg3</members>
+        <members>AddNewProductCustomController</members>
+        <members>AddNewProductCustomController_Test</members>
+        <members>addNewProductCustom</members>
+        <members>customProductLookup</members>
+        <name>CustomLabel</name>
+    </types>
+    <version>64.0</version>
 </Package>
