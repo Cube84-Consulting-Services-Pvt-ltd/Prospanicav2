@@ -5,17 +5,20 @@
  *                      Modifying the line items through the datatable.
  * @author            : Cube84
  * @CreatedDate       : 07-10-2025
- * @last modified on  : 07-21-2025
+ * @last modified on  : 07-23-2025
  * @last modified by  : Cube84
  * @description       : Added the functionality to select the PriceBook for the Opportunity
 **/
 public with sharing class AddNewProductCustomController {
+    public static final String DEFAULT_PRICE_BOOK_NAME = System.today().year() + ' Price Book';
     /**
         * @description: Used to fetch the products for lookup search based on the pricebook.
     **/
     @AuraEnabled(cacheable=false)
     public static List<Product2> searchProducts(String priceBookId, String keyword) {
-        if (String.isBlank(keyword)) return new List<Product2>();
+        if (String.isBlank(keyword)) {
+            return new List<Product2>();
+        }
         String searchPattern = '%' + keyword + '%';
 
         Set<Id> prodIds = new Set<Id>();
@@ -23,7 +26,7 @@ public with sharing class AddNewProductCustomController {
             SELECT Id, Product2Id
             FROM PricebookEntry
             WHERE Pricebook2Id = :priceBookId
-                AND IsActive = true
+                AND IsActive = true WITH SECURITY_ENFORCED
         ]) {
             prodIds.add(pbe.Product2Id);
         }
@@ -33,7 +36,7 @@ public with sharing class AddNewProductCustomController {
             FROM Product2
             WHERE Id IN :prodIds
                 AND Name LIKE :searchPattern
-                    AND IsActive = true
+                    AND IsActive = true WITH SECURITY_ENFORCED
             ORDER BY Name ASC
         ];
     }
@@ -47,6 +50,7 @@ public with sharing class AddNewProductCustomController {
             SELECT Id, Pricebook2Id, Pricebook2.Name
             FROM Opportunity
             WHERE Id = :recordId
+            WITH SECURITY_ENFORCED
         ];
 
         OpportunityProductWrapper opw = new OpportunityProductWrapper();
@@ -59,6 +63,7 @@ public with sharing class AddNewProductCustomController {
                 WHERE Pricebook2Id = :op.Pricebook2Id
                     AND IsActive = true
                     AND Product2.IsActive = true
+                    WITH SECURITY_ENFORCED
             ]) {
                 pbeMap.put(pbe.Product2Id, pbe);
             }
@@ -70,6 +75,7 @@ public with sharing class AddNewProductCustomController {
                 FROM Product2
                 WHERE Id IN :pbeMap.keySet()
                     AND Name LIKE :('%' + productName + '%')
+                WITH SECURITY_ENFORCED
                 ORDER BY Name ASC
             ]) {
                 PricebookEntry pbe = pbeMap.get(p.Id) ?? null;
@@ -90,7 +96,7 @@ public with sharing class AddNewProductCustomController {
             opw.productList = productWrappers;
         }
         else {
-            opw.stdPbId = [Select Id from PriceBook2 Where IsStandard = true AND IsActive = true limit 1] ?.Id;
+            opw.defaultPbId = [Select Id from PriceBook2 Where Name = :DEFAULT_PRICE_BOOK_NAME AND IsActive = true WITH SECURITY_ENFORCED limit 1] ?.Id;
         }
         return JSON.serialize(opw);
     }
@@ -101,7 +107,7 @@ public with sharing class AddNewProductCustomController {
     @AuraEnabled(cacheable=false)
     public static String saveProducts(String recordData, String recId) {
         List<ProductWrapper> wc = (List<ProductWrapper>)JSON.deserialize(recordData, List<ProductWrapper>.class);
-        List<OpportunityLineItem> lstOpp = new List<OpportunityLineItem>();
+        List<OpportunityLineItem> oliList = new List<OpportunityLineItem>();
 
         for (ProductWrapper pw : wc) {
             OpportunityLineItem oli = new OpportunityLineItem();
@@ -112,21 +118,23 @@ public with sharing class AddNewProductCustomController {
             oli.OpportunityId = recId;
             oli.Product2Id = pw.productId;
             oli.PricebookEntryId = pw.pricebookEntryId;
-            lstOpp.add(oli);
+            oliList.add(oli);
         }
 
         try {
-            insert lstOpp;
+            if (Schema.sObjectType.OpportunityLineItem.isAccessible() && Schema.sObjectType.OpportunityLineItem.isCreateable()) {
+                insert oliList;
+            }
             return 'success';
         } catch (Exception e) {
-            System.debug(e.getMessage());
-            return 'error';
+            System.debug('Error inserting Oppty Products: ' + e.getMessage());
+            throw new AuraHandledException('Error: ' + e.getMessage());
         }
     }
 
     public class OpportunityProductWrapper {
         public Opportunity oppDetail;
-        public String stdPbId;
+        public String defaultPbId;
         public List<ProductWrapper> productList;
     }
 
@@ -158,7 +166,15 @@ public with sharing class AddNewProductCustomController {
         Opportunity opp = new Opportunity();
         opp.Id = recordId;
         opp.Pricebook2Id = priceBookId;
-        update opp;
-        return 'Success';
+        try {
+            if (Schema.sObjectType.Opportunity.isAccessible() && Schema.sObjectType.Opportunity.isUpdateable()) {
+                update opp;
+            }
+            return 'Success';
+        }
+        catch (Exception e) {
+            System.debug('Error updating Pricebook2Id: ' + e.getMessage());
+            throw new AuraHandledException('Error: ' + e.getMessage());
+        }
     }
 }
