@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <frameHeight>1200</frameHeight>
+    <hasSidebar>true</hasSidebar>
+    <icon>Salesforce1_Branding_Resources/RedGlobeBullet_png.png</icon>
+    <label>Lead Conversion</label>
+    <motif>Custom119: TV Widescreen</motif>
+    <scontrol>LeadConversion</scontrol>
+</CustomTab>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>standard-home</defaultLandingTab>
+    <description>Profile structure for National office teams to view information on items sold needing to be fulfilled,</description>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <label>Fulfillment Services</label>
+    <logo>Media/NSHMBA_org_Logo.jpg</logo>
+    <tabs>standard-Dashboard</tabs>
+    <tabs>standard-Account</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>standard-Order</tabs>
+    <tabs>standard-Opportunity</tabs>
+    <tabs>NewContact</tabs>
+    <tabs>standard-Chatter</tabs>
+    <tabs>standard-UserProfile</tabs>
+    <tabs>standard-ProfilePlatformOverview</tabs>
+    <tabs>standard-WorkBadge</tabs>
+    <tabs>standard-Recognition</tabs>
+    <tabs>standard-WorkBadgeDefinition</tabs>
+    <tabs>standard-StreamingChannel</tabs>
+    <tabs>Proposal__c</tabs>
+    <tabs>Web__c</tabs>
+</CustomApplication>

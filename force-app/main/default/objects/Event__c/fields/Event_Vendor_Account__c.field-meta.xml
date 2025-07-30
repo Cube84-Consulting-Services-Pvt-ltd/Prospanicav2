@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Vendor_Account__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Event Vendor Account primarily responsible for managing this event</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select an Account with the Type = &apos;Event Vendor&apos; for this event.</inlineHelpText>
+    <label>Event Vendor Account</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Events</relationshipLabel>
+    <relationshipName>Events</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

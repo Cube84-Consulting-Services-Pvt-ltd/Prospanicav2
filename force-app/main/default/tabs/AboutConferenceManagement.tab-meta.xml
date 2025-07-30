@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Companies can use Conference Management to track presenters, the conferences they have spoken at, and the topics they&apos;ve addressed - information they can use to schedule speakers, understand industry trends, and connect with prospective customers.</description>
+    <frameHeight>600</frameHeight>
+    <hasSidebar>true</hasSidebar>
+    <label>About Conference Management</label>
+    <motif>Custom5: Leaf</motif>
+    <scontrol>AboutConferenceManagement</scontrol>
+</CustomTab>

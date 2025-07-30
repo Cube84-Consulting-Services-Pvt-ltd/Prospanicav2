@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conference_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Conference Specialty</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>00-General</fullName>
+                <default>false</default>
+                <label>00-General</label>
+            </value>
+            <value>
+                <fullName>Allergy</fullName>
+                <default>false</default>
+                <label>Allergy</label>
+            </value>
+            <value>
+                <fullName>Anaesthesiology</fullName>
+                <default>false</default>
+                <label>Anaesthesiology</label>
+            </value>
+            <value>
+                <fullName>Cardiology</fullName>
+                <default>false</default>
+                <label>Cardiology</label>
+            </value>
+            <value>
+                <fullName>Chiropractics</fullName>
+                <default>false</default>
+                <label>Chiropractics</label>
+            </value>
+            <value>
+                <fullName>Clinical Pharmacology</fullName>
+                <default>false</default>
+                <label>Clinical Pharmacology</label>
+            </value>
+            <value>
+                <fullName>Dental &amp; Oral Disorders</fullName>
+                <default>false</default>
+                <label>Dental &amp; Oral Disorders</label>
+            </value>
+            <value>
+                <fullName>Dermatology</fullName>
+                <default>false</default>
+                <label>Dermatology</label>
+            </value>
+            <value>
+                <fullName>Diagnostic Radiology</fullName>
+                <default>false</default>
+                <label>Diagnostic Radiology</label>
+            </value>
+            <value>
+                <fullName>Emergency Medicine</fullName>
+                <default>false</default>
+                <label>Emergency Medicine</label>
+            </value>
+            <value>
+                <fullName>Endocrinology</fullName>
+                <default>false</default>
+                <label>Endocrinology</label>
+            </value>
+            <value>
+                <fullName>Gatroenterology</fullName>
+                <default>false</default>
+                <label>Gatroenterology</label>
+            </value>
+            <value>
+                <fullName>General Medicine</fullName>
+                <default>false</default>
+                <label>General Medicine</label>
+            </value>
+            <value>
+                <fullName>Genetics</fullName>
+                <default>false</default>
+                <label>Genetics</label>
+            </value>
+            <value>
+                <fullName>Geriatrics</fullName>
+                <default>false</default>
+                <label>Geriatrics</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

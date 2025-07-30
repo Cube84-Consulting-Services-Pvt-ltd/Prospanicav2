@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MDF_Partner_Account__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <inlineHelpText>Account which the Market Development Fund (MDF) is associated</inlineHelpText>
+    <label>MDF Partner Account</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Event MDFs</relationshipLabel>
+    <relationshipName>Event_MDFs</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Household_Maintenance__c</fullName>
+    <externalId>false</externalId>
+    <formula>HYPERLINK(&quot;/servlet/servlet.Integration?lid=01N700000000rJg&amp;eid=&quot; &amp; Id  &amp; &quot;&amp;direction=toContact&quot;, IMAGE( &quot;servlet/servlet.FileDownload?file=01570000000Lo7y&quot;, &quot;image from Documents tab&quot;))</formula>
+    <label>Household Maintenance</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

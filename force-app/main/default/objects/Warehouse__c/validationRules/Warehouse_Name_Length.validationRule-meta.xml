@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Warehouse_Name_Length</fullName>
+    <active>true</active>
+    <description>In order to ensure no errors in Canvas when creating a FeedItem using the warehouse name, the warehouse name cannot exceed 40 chars.</description>
+    <errorConditionFormula>LEN(Name) &gt; 40</errorConditionFormula>
+    <errorDisplayField>Name</errorDisplayField>
+    <errorMessage>Name exceeds length of 40 chars</errorMessage>
+</ValidationRule>

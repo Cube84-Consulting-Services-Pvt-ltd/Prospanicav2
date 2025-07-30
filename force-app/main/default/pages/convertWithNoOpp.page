@@ -1,0 +1,3 @@
+<apex:page standardController="lead" action="/lead/leadconvert.jsp?retURL=%2F{!lead.Id}&id={!lead.Id}&nooppti=1&nooverride=1" lightningstylesheets="true">
+
+</apex:page>

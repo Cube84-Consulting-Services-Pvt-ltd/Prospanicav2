@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ConferencesNotParticipatingIn</fullName>
+    <columns>NAME</columns>
+    <columns>City__c</columns>
+    <columns>Conference_Type__c</columns>
+    <columns>Start_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Multicorp_Status__c</field>
+        <operation>equals</operation>
+        <value>Not Attending</value>
+    </filters>
+    <label>Conferences - Not Participating In</label>
+</ListView>

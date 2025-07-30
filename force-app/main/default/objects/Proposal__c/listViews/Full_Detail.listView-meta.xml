@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Full_Detail</fullName>
+    <columns>NAME</columns>
+    <columns>Proposal_Status__c</columns>
+    <columns>Disposition__c</columns>
+    <columns>LAST_ACTIVITY</columns>
+    <filterScope>Everything</filterScope>
+    <label>Full Detail</label>
+    <sharedTo>
+        <roleAndSubordinates>DepartmentManager</roleAndSubordinates>
+        <roleAndSubordinates>Department_User</roleAndSubordinates>
+        <roleAndSubordinates>Director</roleAndSubordinates>
+    </sharedTo>
+</ListView>

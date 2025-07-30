@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Actual_MDF__c</fullName>
+    <externalId>false</externalId>
+    <label>Total Actual MDF</label>
+    <summarizedField>Event_MDF__c.MDF_Amount__c</summarizedField>
+    <summaryFilterItems>
+        <field>Event_MDF__c.Received_Payment__c</field>
+        <operation>equals</operation>
+        <value>True</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Event_MDF__c.Event__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

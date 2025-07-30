@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Network xmlns="http://soap.sforce.com/2006/04/metadata">
+    <allowInternalUserLogin>false</allowInternalUserLogin>
+    <allowMembersToFlag>true</allowMembersToFlag>
+    <changePasswordTemplate>unfiled$public/CommunityChangePasswordEmailTemplate</changePasswordTemplate>
+    <communityRoles/>
+    <description>Portal access to developing Relations and Business with Universities and Companies</description>
+    <disableReputationRecordConversations>false</disableReputationRecordConversations>
+    <emailFooterLogo>Communities_Shared_Document_Folder/Prospanica_Logo_4_salesforce_png.png</emailFooterLogo>
+    <emailFooterText>Prospanica - 450 East John Carpenter Freeway, Suite 200 Irving, TX 75052</emailFooterText>
+    <emailSenderAddress>support@prospanica.org</emailSenderAddress>
+    <emailSenderName>Prospanica Partnership</emailSenderName>
+    <enableApexCDNCaching>false</enableApexCDNCaching>
+    <enableCustomVFErrorPageOverrides>true</enableCustomVFErrorPageOverrides>
+    <enableDirectMessages>false</enableDirectMessages>
+    <enableExpFriendlyUrlsAsDefault>false</enableExpFriendlyUrlsAsDefault>
+    <enableExperienceBundleBasedSnaOverrideEnabled>false</enableExperienceBundleBasedSnaOverrideEnabled>
+    <enableGuestChatter>false</enableGuestChatter>
+    <enableGuestFileAccess>false</enableGuestFileAccess>
+    <enableGuestMemberVisibility>false</enableGuestMemberVisibility>
+    <enableImageOptimizationCDN>true</enableImageOptimizationCDN>
+    <enableInvitation>false</enableInvitation>
+    <enableKnowledgeable>true</enableKnowledgeable>
+    <enableLWRExperienceConnectedApp>false</enableLWRExperienceConnectedApp>
+    <enableMemberVisibility>true</enableMemberVisibility>
+    <enableNicknameDisplay>true</enableNicknameDisplay>
+    <enablePrivateMessages>true</enablePrivateMessages>
+    <enableReputation>true</enableReputation>
+    <enableShowAllNetworkSettings>true</enableShowAllNetworkSettings>
+    <enableSiteAsContainer>false</enableSiteAsContainer>
+    <enableTalkingAboutStats>true</enableTalkingAboutStats>
+    <enableTopicAssignmentRules>false</enableTopicAssignmentRules>
+    <enableTopicSuggestions>true</enableTopicSuggestions>
+    <enableUpDownVote>false</enableUpDownVote>
+    <forgotPasswordTemplate>unfiled$public/SUPPORTSelfServiceResetPasswordSAMPLE</forgotPasswordTemplate>
+    <gatherCustomerSentimentData>false</gatherCustomerSentimentData>
+    <headlessForgotPasswordTemplate>unfiled$public/CommunityHeadlessForgotPasswordTemplate</headlessForgotPasswordTemplate>
+    <headlessRegistrationTemplate>unfiled$public/CommunityHeadlessRegistrationTemplate</headlessRegistrationTemplate>
+    <logoutUrl>http://www.nshmba.org</logoutUrl>
+    <networkMemberGroups>
+        <permissionSet>University_Relations</permissionSet>
+        <permissionSet>permissioner__The_Permissioner_Permission_Set</permissionSet>
+        <permissionSet>permissioner__Permissioner_Permission_Set</permissionSet>
+        <permissionSet>Development_Live_Testing</permissionSet>
+        <permissionSet>Sandbox_Developer</permissionSet>
+        <permissionSet>Community_Users_Executive</permissionSet>
+        <permissionSet>Community_Users_standard</permissionSet>
+        <profile>Admin</profile>
+        <profile>National Office-Corporate Relations Account Manger</profile>
+        <profile>Business Development Account Manager</profile>
+        <profile>Operations</profile>
+        <profile>University Relations</profile>
+        <profile>Marketing</profile>
+        <profile>Super Administrator</profile>
+        <profile>God Admin</profile>
+        <profile>Marketing Department</profile>
+        <profile>Business Director</profile>
+        <profile>Member Services</profile>
+        <profile>Finance</profile>
+        <profile>National Executive Viewer</profile>
+        <profile>Corporate Relations Manager</profile>
+    </networkMemberGroups>
+    <networkPageOverrides>
+        <changePasswordPageOverrideSetting>Standard</changePasswordPageOverrideSetting>
+        <forgotPasswordPageOverrideSetting>Designer</forgotPasswordPageOverrideSetting>
+        <homePageOverrideSetting>VisualForce</homePageOverrideSetting>
+        <loginPageOverrideSetting>Designer</loginPageOverrideSetting>
+        <selfRegProfilePageOverrideSetting>Standard</selfRegProfilePageOverrideSetting>
+    </networkPageOverrides>
+    <picassoSite>Customer_Relations_C</picassoSite>
+    <reputationLevels>
+        <level>
+            <label>Newbie</label>
+            <lowerThreshold>0.0</lowerThreshold>
+        </level>
+        <level>
+            <label>Newcommer</label>
+            <lowerThreshold>51.0</lowerThreshold>
+        </level>
+        <level>
+            <label>Getting the hang of it</label>
+            <lowerThreshold>151.0</lowerThreshold>
+        </level>
+        <level>
+            <label>The Helper</label>
+            <lowerThreshold>401.0</lowerThreshold>
+        </level>
+        <level>
+            <lowerThreshold>801.0</lowerThreshold>
+        </level>
+        <level>
+            <label>The Leader</label>
+            <lowerThreshold>1501.0</lowerThreshold>
+        </level>
+        <level>
+            <label>The Teacher</label>
+            <lowerThreshold>2501.0</lowerThreshold>
+        </level>
+        <level>
+            <lowerThreshold>4001.0</lowerThreshold>
+        </level>
+        <level>
+            <lowerThreshold>6001.0</lowerThreshold>
+        </level>
+        <level>
+            <label>Master</label>
+            <lowerThreshold>10001.0</lowerThreshold>
+        </level>
+    </reputationLevels>
+    <reputationPointsRules>
+        <pointsRule>
+            <eventType>FeedItemSomeoneSharesYourPost</eventType>
+            <points>5</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemWriteAComment</eventType>
+            <points>1</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemAnswerAQuestion</eventType>
+            <points>10</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemReceiveAnAnswer</eventType>
+            <points>5</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemShareAPost</eventType>
+            <points>1</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemMentionSomeone</eventType>
+            <points>1</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemWriteAPost</eventType>
+            <points>5</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemPostQuestion</eventType>
+            <points>1</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemReceiveALike</eventType>
+            <points>5</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemReceiveAComment</eventType>
+            <points>5</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemLikeSomething</eventType>
+            <points>1</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemMarkAnswerAsBest</eventType>
+            <points>50</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemReceiveAMention</eventType>
+            <points>5</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemYourAnswerMarkedBest</eventType>
+            <points>20</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>EndorsedForKnowledgeOnATopic</eventType>
+            <points>0</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>EndorseSomeoneForKnowledgeOnATopic</eventType>
+            <points>0</points>
+        </pointsRule>
+    </reputationPointsRules>
+    <selfRegistration>false</selfRegistration>
+    <sendWelcomeEmail>true</sendWelcomeEmail>
+    <site>Customer_Relations</site>
+    <siteArchiveStatus>NotArchived</siteArchiveStatus>
+    <status>DownForMaintenance</status>
+    <tabs>
+        <customTab>Oppertunity_Snap_Shot</customTab>
+        <customTab>NewContact</customTab>
+        <customTab>LeadConversion</customTab>
+        <customTab>Warehouse__c</customTab>
+        <customTab>Proposal__c</customTab>
+        <defaultTab>Chatter</defaultTab>
+        <standardTab>Chatter</standardTab>
+        <standardTab>Console</standardTab>
+        <standardTab>Dashboard</standardTab>
+        <standardTab>Opportunity</standardTab>
+        <standardTab>Account</standardTab>
+        <standardTab>Contact</standardTab>
+        <standardTab>Lead</standardTab>
+        <standardTab>OtherUserProfile</standardTab>
+        <standardTab>Recognition</standardTab>
+        <standardTab>WorkBadge</standardTab>
+        <standardTab>WorkBadgeDefinition</standardTab>
+        <standardTab>Idea</standardTab>
+        <standardTab>Product2</standardTab>
+    </tabs>
+    <urlPathPrefix>Relationships</urlPathPrefix>
+    <welcomeTemplate>unfiled$public/NewUserEmail</welcomeTemplate>
+</Network>

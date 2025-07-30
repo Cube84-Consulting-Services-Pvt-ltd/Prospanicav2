@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Event Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Executive Event</fullName>
+                <default>false</default>
+                <label>Executive Event</label>
+            </value>
+            <value>
+                <fullName>Internal Event</fullName>
+                <default>false</default>
+                <label>Internal Event</label>
+            </value>
+            <value>
+                <fullName>Launch Event</fullName>
+                <default>false</default>
+                <label>Launch Event</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+                <label>Trade Show</label>
+            </value>
+            <value>
+                <fullName>User Conference</fullName>
+                <default>false</default>
+                <label>User Conference</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>CY_Closed_Lost_oppertunty</fullName>
+        <description>CY Closed Lost oppertunty</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>_tsavino@nshmba.org</recipient>
+            <type>partnerUser</type>
+        </recipients>
+        <recipients>
+            <recipient>agonzales@nshmba.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>corporaterelations@nshmba.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Downgraded_Opportunities</template>
+    </alerts>
+    <alerts>
+        <fullName>Closed_Won_Notification</fullName>
+        <description>Closed Deal Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>_tsavino@nshmba.org</recipient>
+            <type>partnerUser</type>
+        </recipients>
+        <recipients>
+            <recipient>mnavarro@nshmba.org</recipient>
+            <type>partnerUser</type>
+        </recipients>
+        <recipients>
+            <recipient>mpuente@nshmba.org</recipient>
+            <type>partnerUser</type>
+        </recipients>
+        <recipients>
+            <recipient>rschwan@nshmba.org</recipient>
+            <type>partnerUser</type>
+        </recipients>
+        <recipients>
+            <recipient>agonzales@nshmba.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>atristan@nshmba.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>partnershipdevelopment@nshmba.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Closed_Won_Opportunity</template>
+    </alerts>
+    <alerts>
+        <fullName>Downgrade_Notification</fullName>
+        <description>Downgrade Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>mnavarro@nshmba.org</recipient>
+            <type>partnerUser</type>
+        </recipients>
+        <recipients>
+            <recipient>mpuente@nshmba.org</recipient>
+            <type>partnerUser</type>
+        </recipients>
+        <recipients>
+            <recipient>vruiz@nshmba.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Downgraded_Opportunities</template>
+    </alerts>
+    <alerts>
+        <fullName>Proposal_Approved</fullName>
+        <description>Proposal Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/pnetSurveyEmail</template>
+    </alerts>
+    <alerts>
+        <fullName>Proposal_Rejected</fullName>
+        <description>Proposal needs more review</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Downgraded_Opportunities</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Approved_Proposal_Stage</fullName>
+        <field>StageName</field>
+        <literalValue>Ask - Accepted</literalValue>
+        <name>Approved Proposal Stage</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Closed_Lost_Date</fullName>
+        <field>Posted_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Closed Lost Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Proposal_Reveiw</fullName>
+        <description>Update Stage to Proposal for internal review and client review.</description>
+        <field>StageName</field>
+        <literalValue>Proposal</literalValue>
+        <name>Proposal Reveiw</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Proposal_Under_Review</fullName>
+        <field>StageName</field>
+        <literalValue>Ask - Under Review</literalValue>
+        <name>Proposal Under Review</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Recall_Oppertunity</fullName>
+        <field>StageName</field>
+        <literalValue>Discovery</literalValue>
+        <name>Recall Oppertunity</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Posted_Date</fullName>
+        <field>Posted_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Set Posted Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Closed Lost</fullName>
+        <actions>
+            <name>Closed_Lost_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Closed Lost</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Closed Won Opportunity</fullName>
+        <actions>
+            <name>Closed_Won_Notification</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Posted</value>
+        </criteriaItems>
+        <description>This is the rule that applies to all Closed Won Business</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Closed lost Opportunity</fullName>
+        <actions>
+            <name>CY_Closed_Lost_oppertunty</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>(1 AND 2) or 3</booleanFilter>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Lost</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Name</field>
+            <operation>contains</operation>
+            <value>2015</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Cancellation</value>
+        </criteriaItems>
+        <description>This is the rule that applies to all Closed lost Business</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Created Package</fullName>
+        <actions>
+            <name>Proposal_Reveiw</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.CreatedById</field>
+            <operation>equals</operation>
+            <value>Regional Account Manager</value>
+        </criteriaItems>
+        <description>This workflow is designed to notify the Sr Mgr &amp; Director of Ops when a new package has been created.</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Downgraded Opportunities</fullName>
+        <actions>
+            <name>Downgrade_Notification</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Downgrade,Cancellation</value>
+        </criteriaItems>
+        <description>This is the rule that applies to any opportunity that gets downgraded.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Send Acknowledgement Letter</fullName>
+        <actions>
+            <name>SendAcknowledgement</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Closed Won,Posted</value>
+        </criteriaItems>
+        <description>used to remind donation owner to send acknowledgement for any donations that are Posted / Closed Won.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Set Posted Date</fullName>
+        <actions>
+            <name>Set_Posted_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Posted</value>
+        </criteriaItems>
+        <description>when stage is changed to &quot;posted&quot;, set the &quot;posted date&quot; field to current date</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <tasks>
+        <fullName>SendAcknowledgement</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>Please send an acknowledgement for this donation</description>
+        <dueDateOffset>7</dueDateOffset>
+        <notifyAssignee>true</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Send Acknowledgement</subject>
+    </tasks>
+</Workflow>

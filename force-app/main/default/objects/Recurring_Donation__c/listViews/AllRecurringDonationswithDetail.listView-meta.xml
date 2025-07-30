@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AllRecurringDonationswithDetail</fullName>
+    <columns>NAME</columns>
+    <columns>Campaign__c</columns>
+    <columns>Program_Designation__c</columns>
+    <columns>Date_Established__c</columns>
+    <columns>Donation_Amount__c</columns>
+    <columns>Recurring_Donation_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Recurring Donations with  Detail</label>
+</ListView>
